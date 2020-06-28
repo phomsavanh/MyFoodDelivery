@@ -1,0 +1,58 @@
+import 'package:food_delivery/models/food_models.dart';
+
+final foods = [
+  Food(
+    id: '1',
+    name: 'Hot Coffee',
+    imagePath: 'images/breakfast.jpeg',
+    category: '1',
+    price: 22,
+    discount: 35,
+    rating: 99,
+  ),
+  Food(
+    id: '2',
+    name: 'Salmon Steak',
+    imagePath: 'images/lunch.jpeg',
+    category: '2',
+    price: 60,
+    discount: 35,
+    rating: 99,
+  ),
+  Food(
+    id: '3',
+    name: 'Fried Rice',
+    imagePath: 'images/pizza.png',
+    category: '1',
+    price: 22,
+    discount: 35,
+    rating: 99,
+  ),
+  Food(
+    id: '1',
+    name: 'Hot Coffee',
+    imagePath: 'images/breakfast.jpeg',
+    category: '1',
+    price: 22,
+    discount: 35,
+    rating: 99,
+  ),
+  Food(
+    id: '2',
+    name: 'Salmon Steak',
+    imagePath: 'images/turkey.png',
+    category: '2',
+    price: 60,
+    discount: 35,
+    rating: 99,
+  ),
+  Food(
+    id: '3',
+    name: 'Fried Rice',
+    imagePath: 'images/supper_1.jpeg',
+    category: '1',
+    price: 22,
+    discount: 35,
+    rating: 99,
+  ),
+];
