@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:food_delivery/data/food_data.dart';
 import 'package:food_delivery/models/food_models.dart';
+import 'package:food_delivery/scoped_model/food_model.dart';
+
 import 'package:food_delivery/widgets/bought_foods.dart';
 import 'package:food_delivery/widgets/carousel.dart';
 import 'package:food_delivery/widgets/food_category.dart';
@@ -14,7 +16,15 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  List<Food> _foods = foods;
+  @override
+  void initState() {
+    super.initState();
+
+    FoodModel foodModel = FoodModel();
+    foodModel.fetchFoods();
+    print("init ${foodModel.appFood}");
+    print(foods.runtimeType);
+  }
 
   Widget _buildFoodItems(Food food) {
     return Container(
@@ -42,7 +52,7 @@ class _HomePageState extends State<HomePage> {
           SearchField(),
           MyTitle(),
           Column(
-            children: _foods.map(_buildFoodItems).toList(),
+            children: foods.map(_buildFoodItems).toList(),
           )
         ],
       ),

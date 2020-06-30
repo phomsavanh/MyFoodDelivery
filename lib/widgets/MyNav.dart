@@ -16,14 +16,15 @@ class _NavState extends State<Nav> {
 
   @override
   void initState() {
-    super.initState();
     pages = [
       HomePage(),
       OrderPage(),
       FavouritePage(),
       ProfilePage(),
     ];
-    currentPage = HomePage();
+    currentPage = pages[0];
+
+    super.initState();
   }
 
   @override
